@@ -3,27 +3,26 @@ title: "API Reference - v2.0"
 description: "Complete API documentation for v2.0 with GraphQL support"
 ---
 
-# Salsa as a Service API v2.0
-
 The v2.0 API adds GraphQL support, enhanced webhooks, and new AI forecasting endpoints.
 
 ## Base URL
 
-```
+```https
 https://api.salsaasaservice.com/v2
 ```
 
-> **Note:**
-**New in v2.0**: GraphQL endpoint at `https://api.salsaasaservice.com/graphql`
-
+<Note>
+  **New in v2.0**: GraphQL endpoint at `https://api.salsaasaservice.com/graphql`
+</Note>
 
 ## Authentication
 
 All API requests require authentication using your API key.
 
-> **Note:**
-**API Key**: Get your API key from the [Developer Settings](https://app.salsaasaservice.com/settings/api) in your dashboard.
-
+<Note>
+  **API Key**: Get your API key from the [Developer
+  Settings](https://app.salsaasaservice.com/settings/api) in your dashboard.
+</Note>
 
 ### Authentication Header
 
@@ -36,7 +35,7 @@ Authorization: Bearer YOUR_API_KEY
 ## Rate Limits
 
 - **Free Plan**: 1,000 requests per hour
-- **Professional Plan**: 10,000 requests per hour  
+- **Professional Plan**: 10,000 requests per hour
 - **Enterprise Plan**: 100,000 requests per hour
 
 Rate limit headers are included in all responses:
@@ -48,7 +47,6 @@ X-RateLimit-Reset: 1640995200
 ```
 
 ## Core Endpoints
-
 
 **[Inventory Management](#inventory)**  
 Manage salsa ingredients, track stock levels, and monitor freshness.
@@ -62,9 +60,7 @@ Track salsa production batches, quality metrics, and yield data.
 **[Analytics & Reporting](#analytics)**  
 Access detailed analytics and generate custom reports.
 
-
-
-## Inventory Management 
+## Inventory Management
 
 ### Get All Ingredients
 
@@ -150,7 +146,7 @@ POST /ingredients
 }
 ```
 
-## Recipe Management 
+## Recipe Management
 
 ### Get All Recipes
 
@@ -224,7 +220,7 @@ Update an existing recipe.
 PUT /recipes/{recipe_id}
 ```
 
-## Production Tracking 
+## Production Tracking
 
 ### Start Production Batch
 
@@ -286,7 +282,7 @@ Retrieve production history with filtering options.
 GET /production/batches?start_date=2024-01-01&end_date=2024-01-31&recipe_id=rec_456
 ```
 
-## Analytics & Reporting 
+## Analytics & Reporting
 
 ### Get Production Analytics
 
@@ -344,39 +340,37 @@ The API uses standard HTTP status codes and returns detailed error information.
 
 ### Common Error Codes
 
-
 #### Client Errors
 
 - `400 Bad Request` - Invalid request data
-    - `401 Unauthorized` - Missing or invalid API key
-    - `403 Forbidden` - Insufficient permissions
-    - `404 Not Found` - Resource not found
-    - `422 Unprocessable Entity` - Validation errors
-    - `429 Too Many Requests` - Rate limit exceeded
+  - `401 Unauthorized` - Missing or invalid API key
+  - `403 Forbidden` - Insufficient permissions
+  - `404 Not Found` - Resource not found
+  - `422 Unprocessable Entity` - Validation errors
+  - `429 Too Many Requests` - Rate limit exceeded
 
 #### Server Errors
 
 - `500 Internal Server Error` - Server error
-    - `502 Bad Gateway` - Upstream service error
-    - `503 Service Unavailable` - Service temporarily unavailable
-
-
+  - `502 Bad Gateway` - Upstream service error
+  - `503 Service Unavailable` - Service temporarily unavailable
 
 ## SDKs and Libraries
 
 We provide official SDKs for popular programming languages:
 
+<Tabs>
+  <Tab title="JavaScript/Node.js">
+      Official SDK for JavaScript and Node.js applications.
+  </Tab>
 
-**[JavaScript/Node.js](https://github.com/salsaasaservice/salsa-js)**  
-Official SDK for JavaScript and Node.js applications.
+<Tab title="Python">Python SDK for data analysis and automation.</Tab>
 
-**[Python](https://github.com/salsaasaservice/salsa-python)**  
-Python SDK for data analysis and automation.
+  <Tab title="PHP">
+      PHP SDK for web applications and WordPress plugins.
 
-**[PHP](https://github.com/salsaasaservice/salsa-php)**  
-PHP SDK for web applications and WordPress plugins.
-
-
+  </Tab>
+</Tabs>
 
 ## Webhooks
 
@@ -410,19 +404,29 @@ POST /webhooks
 Use our sandbox environment for testing your integrations:
 
 **Sandbox Base URL:**
+
 ```
-https://api-sandbox.salsaasaservice.com/v1
+https://api-sandbox.salsaasaservice.com/v2
 ```
 
-> **Warning:**
-**Sandbox Data**: The sandbox environment uses test data and doesn't affect your production account.
-
+<Warning>
+  The sandbox environment uses test data and doesn't affect your production
+  account.
+</Warning>
 
 ## Support
 
-Need help with the API? We're here to assist:
-
-- 📧 **Email**: api-support@salsaasaservice.com
-- 📚 **Documentation**: Browse our comprehensive guides
-- 💬 **Developer Community**: Join our Discord server
-- 🎥 **Video Tutorials**: Watch integration tutorials
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope">
+    api-support@salsaasaservice.com
+  </Card>
+  <Card title="Documentation" icon="book">
+    Browse our comprehensive API guides
+  </Card>
+  <Card title="Developer Community" icon="discord">
+    Join our Discord server for help
+  </Card>
+  <Card title="Video Tutorials" icon="video">
+    Watch integration tutorials
+  </Card>
+</CardGroup>

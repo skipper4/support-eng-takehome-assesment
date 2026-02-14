@@ -3,9 +3,10 @@ title: "Advanced Usage"
 description: "Master AI forecasting, IoT monitoring, automation, and enterprise features in v2.0"
 ---
 
-# Advanced Usage Guide
-
-Unlock the full potential of Salsa as a Service v2.0 with AI-powered features, IoT integration, advanced automation, and enterprise-grade capabilities.
+<Card>
+  Unlock the full potential of Salsa as a Service v2.0 with AI-powered features,
+  IoT integration, advanced automation, and enterprise-grade capabilities.
+</Card>
 
 ## AI-Powered Demand Forecasting
 
@@ -13,21 +14,20 @@ Unlock the full potential of Salsa as a Service v2.0 with AI-powered features, I
 
 v2.0's AI forecasting engine uses multiple machine learning models to predict salsa demand with industry-leading accuracy:
 
-
-
-
 ### Configuring Advanced Forecasting
 
-
-1. **Select Forecast Horizon**
+<Steps>
+  <Step title="">
+    **Select Forecast Horizon**
    Choose your forecasting window based on your operational needs:
     - **Short-term (7 days)**: Daily production planning
     - **Medium-term (14 days)**: Ingredient ordering and staffing
     - **Long-term (30+ days)**: Strategic planning and seasonal prep
+  </Step>
 
-2. **Configure Data Sources**
-   Connect additional data sources to improve accuracy:
-    ```javascript
+  <Step title="">
+    **Configure Data Sources** Connect additional data sources to improve accuracy:
+```javascript javascript
     const forecastConfig = {
       data_sources: {
         pos_sales: true,
@@ -44,21 +44,24 @@ v2.0's AI forecasting engine uses multiple machine learning models to predict sa
         anomaly_detection: true
       }
     };
-    ```
+```
+  </Step>
 
-3. **Set Alert Thresholds**
-   Configure alerts for significant forecast changes or anomalies.
+<Step title="">
+  **Set Alert Thresholds** Configure alerts for significant forecast changes or
+  anomalies.
+</Step>
 
-4. **Enable Auto-Actions**
-   Let AI automatically adjust production schedules based on forecasts.
-
-
+  <Step title="">
+    **Enable Auto-Actions** Let AI automatically adjust production schedules based on forecasts.
+  </Step>
+</Steps>
 
 ### Interpreting Forecast Results
 
 The AI provides rich forecast data with confidence intervals:
 
-```json
+```json json
 {
   "forecast_date": "2024-01-20",
   "predicted_demand": {
@@ -88,48 +91,51 @@ The AI provides rich forecast data with confidence intervals:
 
 Monitor and improve your forecast accuracy over time:
 
+<AccordionGroup>
+  <Accordion title="Accuracy Metrics" icon="gauge-high">
+    Monitor and improve your forecast accuracy over time:
+    
+    - **MAPE**: Mean Absolute Percentage Error
+      - **RMSE**: Root Mean Square Error
+      - **Forecast Bias**: Systematic over/under prediction
+      - **Confidence Intervals**: Actual vs predicted ranges
+  </Accordion>
 
-#### Accuracy Metrics
-
-- **MAPE**: Mean Absolute Percentage Error
-    - **RMSE**: Root Mean Square Error
-    - **Forecast Bias**: Systematic over/under prediction
-    - **Confidence Intervals**: Actual vs predicted ranges
-
-#### Model Performance
+<Accordion title="Model Performance" icon="chart-mixed">
 
 View which models perform best for different scenarios:
-    - Short-term vs long-term accuracy
-    - Recipe-specific performance
-    - Seasonal pattern recognition
-    - Event impact prediction
 
-#### Continuous Learning
+- Short-term vs long-term accuracy
+- Recipe-specific performance
+- Seasonal pattern recognition
+- Event impact prediction
 
-The AI automatically:
+</Accordion>
+
+  <Accordion title="Continuous Learning" icon="brain">
+    The AI automatically:
+    
     - Retrains models weekly with new data
     - Adjusts weights based on accuracy
     - Identifies and adapts to new patterns
     - A/B tests model improvements
-
-
+  </Accordion>
+</AccordionGroup>
 
 ## IoT Sensor Integration
 
 ### Sensor Types and Capabilities
 
-
-
-
 ### Real-Time Monitoring Dashboard
 
 Access comprehensive sensor data in real-time:
 
-> **Note:**
-**Dashboard Features**: Live sensor feeds, historical trends, anomaly alerts, predictive maintenance warnings, and automated reports.
+<Note>
+  **Dashboard Features**: Live sensor feeds, historical trends, anomaly alerts,
+  predictive maintenance warnings, and automated reports.
+</Note>
 
-
-```python
+```python Python
 # Example: Query sensor data via API
 from salsa_sdk import SalsaClient
 
@@ -157,16 +163,15 @@ history = client.iot.query_history(
 
 AI analyzes sensor patterns to predict equipment failures before they occur:
 
-
 1. **Equipment Profiling**
    System learns normal operating parameters for each piece of equipment.
 
 2. **Anomaly Detection**
    ML models detect subtle changes that indicate potential issues:
-    - Temperature fluctuations
-    - Unusual vibration patterns
-    - Performance degradation
-    - Power consumption changes
+   - Temperature fluctuations
+   - Unusual vibration patterns
+   - Performance degradation
+   - Power consumption changes
 
 3. **Failure Prediction**
    Predicts equipment failures 3-14 days in advance with 85% accuracy.
@@ -174,18 +179,15 @@ AI analyzes sensor patterns to predict equipment failures before they occur:
 4. **Automated Alerts**
    Notifies maintenance team with specific recommended actions.
 
-
-
 ## Advanced Automation
 
 ### Automated Reordering
 
 Let AI manage your ingredient inventory automatically:
 
-
-#### Configuration
-
-```javascript
+<AccordionGroup>
+  <Accordion title="Configuration" icon="sliders">
+```javascript javascript
     const autoOrderConfig = {
       enabled: true,
       suppliers: ["sysco", "us_foods"],
@@ -205,9 +207,10 @@ Let AI manage your ingredient inventory automatically:
         approvers: ["manager@restaurant.com"]
       }
     };
-    ```
+```
+  </Accordion>
 
-#### Order Logic
+<Accordion title="Order Logic" icon="brain">
 
 The AI considers multiple factors:
 
@@ -218,56 +221,68 @@ The AI considers multiple factors:
     5. **Seasonality**: Seasonal ingredient availability
     6. **Quality**: Supplier quality scores and ratings
 
-#### Order Monitoring
+</Accordion>
+
+<Accordion title="Order Monitoring" icon="eye">
 
 Track automated orders:
 
-    - Order confirmation and tracking
-    - Delivery status updates
-    - Quality verification upon receipt
-    - Automatic inventory updates
-    - Cost tracking and budget alerts
+- Order confirmation and tracking
+- Delivery status updates
+- Quality verification upon receipt
+- Automatic inventory updates
+- Cost tracking and budget alerts
 
+</Accordion>
 
-
-### Smart Production Scheduling
-
+<Accordion title="Smart Production Scheduling" icon="clock">
 AI optimizes production schedules for maximum efficiency:
 
+</Accordion>
 
-
-
-### Workflow Automation
-
+<Accordion title="Workflow Automation" icon="cogs">
 Create custom automation workflows with our visual workflow builder:
 
+<Steps>
+  <Step title="">
+    **Choose Trigger** Select what initiates the workflow:
+      - Time-based (schedule)
+      - Event-based (low stock, quality alert)
+      - Forecast-based (predicted demand spike)
+      - Manual trigger
+  </Step>
 
-1. **Choose Trigger**
-   Select what initiates the workflow:
-    - Time-based (schedule)
-    - Event-based (low stock, quality alert)
-    - Forecast-based (predicted demand spike)
-    - Manual trigger
+<Step title="">
 
-2. **Define Conditions**
-   Set conditions that must be met:
+**Define Conditions** Set conditions that must be met:
+
     - Inventory levels
     - Staff availability
     - Equipment status
     - Budget constraints
 
-3. **Configure Actions**
-   Choose automated actions:
+</Step>
+
+<Step title="">
+
+**Configure Actions** Choose automated actions:
+
     - Create production batches
     - Send notifications
     - Order ingredients
     - Update schedules
     - Generate reports
 
-4. **Set Approvals**
-   Optional: require human approval before executing certain actions.
+</Step>
 
+  <Step title="">
+    **Set Approvals** Optional: require human approval before executing certain actions.
+  </Step>
+</Steps>
 
+</Accordion>
+
+</AccordionGroup>
 
 ## Enterprise Features
 
@@ -275,48 +290,51 @@ Create custom automation workflows with our visual workflow builder:
 
 Manage restaurant chains of any size with centralized control:
 
+<AccordionGroup>
+  <Accordion title="Centralized Dashboard" icon="chart-tree-map">
+    - View all locations on a single dashboard
+        - Compare performance across locations
+        - Identify top and bottom performers
+        - Share best practices across the organization
+  </Accordion>
 
-#### Centralized Dashboard
-
-- View all locations on a single dashboard
-    - Compare performance across locations
-    - Identify top and bottom performers
-    - Share best practices across the organization
-
-#### Location Groups
+<Accordion title="Location Groups" icon="layer-group">
 
 - Organize locations into regions or brands
-    - Apply group-level policies and settings
-    - Run regional reports and analytics
-    - Manage bulk operations (updates, rollouts)
+  - Apply group-level policies and settings
+  - Run regional reports and analytics
+  - Manage bulk operations (updates, rollouts)
 
-#### Recipe Distribution
+</Accordion>
+
+<Accordion title="Recipe Distribution" icon="utensils">
 
 - Maintain recipe consistency across locations
-    - Push recipe updates to selected locations
-    - Allow location-specific modifications
-    - Track recipe version history
+  - Push recipe updates to selected locations
+  - Allow location-specific modifications
+  - Track recipe version history
 
-#### Inventory Transfers
+</Accordion>
 
-- Transfer inventory between locations
-    - Optimize stock distribution
-    - Reduce waste through inter-location transfers
-    - Track transfer history and costs
-
-
+  <Accordion title="Inventory Transfers" icon="truck-arrow-right">
+    - Transfer inventory between locations
+      - Optimize stock distribution
+      - Reduce waste through inter-location transfers
+      - Track transfer history and costs
+  </Accordion>
+</AccordionGroup>
 
 ### Advanced RBAC (Role-Based Access Control)
 
 Fine-grained permission management for enterprise security:
 
-```yaml
+```yaml yaml
 # Example: Custom role definition
 role_name: "Regional Quality Manager"
 permissions:
   # Location access
   locations:
-    access_level: "region"  # all, region, location, none
+    access_level: "region" # all, region, location, none
     regions: ["southwest", "west_coast"]
 
   # Feature permissions
@@ -338,7 +356,7 @@ permissions:
 
   # Data permissions
   data_access:
-    pii: false  # Personal Identifiable Information
+    pii: false # Personal Identifiable Information
     financial: false
     operational: true
 
@@ -350,50 +368,46 @@ permissions:
 
 ### Compliance & Audit
 
-
-
-
 ### API & Integration Platform
 
 Build custom solutions with our enterprise API:
 
-
-#### GraphQL API
-
-Modern, flexible API with real-time subscriptions:
-
-    ```graphql
-    query GetProductionForecast {
-      forecast(location: "loc_123", days: 7) {
-        date
-        recipes {
-          id
-          name
-          predictedDemand {
-            quantity
-            unit
-            confidence
+<Tabs>
+  <Tab title="GraphQL API">
+      Modern, flexible API with real-time subscriptions:
+```graphql graphql
+      query GetProductionForecast {
+        forecast(location: "loc_123", days: 7) {
+          date
+          recipes {
+            id
+            name
+            predictedDemand {
+              quantity
+              unit
+              confidence
+            }
           }
         }
       }
-    }
-
-    subscription OnQualityAlert {
-      qualityAlert(location: "loc_123") {
-        id
-        severity
-        sensorId
-        message
-        timestamp
+      
+      subscription OnQualityAlert {
+        qualityAlert(location: "loc_123") {
+          id
+          severity
+          sensorId
+          message
+          timestamp
+        }
       }
-    }
-    ```
+```
+      
+  </Tab>
 
-#### REST API
+  <Tab title="REST API">
+      Traditional REST endpoints for compatibility:
 
-Traditional REST endpoints for compatibility:
-
-    ```bash
+    ```bash bash
     # Get forecast
     curl -X GET https://api.salsaasaservice.com/v2/forecast \
       -H "Authorization: Bearer YOUR_API_KEY" \
@@ -405,37 +419,37 @@ Traditional REST endpoints for compatibility:
       -d '{"recipe_id": "rec_456", "quantity": 5.0}'
     ```
 
-#### Webhooks v2
+  </Tab>
 
-Enhanced webhook system with:
-
-    - Guaranteed delivery with retry logic
-    - Event filtering and routing
-    - Payload transformation
-    - Signature verification
-    - Delivery status tracking
-
-    ```javascript
-    // Webhook payload example
-    {
-      "event": "quality.alert.created",
-      "timestamp": "2024-01-15T10:30:00Z",
-      "data": {
-        "alert_id": "alert_789",
-        "location_id": "loc_123",
-        "severity": "high",
-        "message": "Temperature out of range",
-        "sensor_id": "temp_001",
-        "reading": {
-          "value": 45.3,
-          "threshold": 40.0
-        }
-      },
-      "signature": "sha256=abc123..."
-    }
-    ```
-
-
+  <Tab title="Webhooks v2">
+      Enhanced webhook system with:
+      
+      - Guaranteed delivery with retry logic
+      - Event filtering and routing
+      - Payload transformation
+      - Signature verification
+      - Delivery status tracking
+```javascript javascript
+      // Webhook payload example
+      {
+        "event": "quality.alert.created",
+        "timestamp": "2024-01-15T10:30:00Z",
+        "data": {
+          "alert_id": "alert_789",
+          "location_id": "loc_123",
+          "severity": "high",
+          "message": "Temperature out of range",
+          "sensor_id": "temp_001",
+          "reading": {
+            "value": 45.3,
+            "threshold": 40.0
+          }
+        },
+        "signature": "sha256=abc123..."
+      }
+``` 
+  </Tab>
+</Tabs>
 
 ## Performance Optimization
 
@@ -443,7 +457,7 @@ Enhanced webhook system with:
 
 Optimize API queries for large-scale operations:
 
-```graphql
+```graphql graphql
 # Use field-level caching
 query GetLocations @cache(ttl: 300) {
   locations {
@@ -458,10 +472,7 @@ query GetLocations @cache(ttl: 300) {
 }
 
 # Use pagination for large datasets
-query GetProductionHistory(
-  $first: Int = 50,
-  $after: String
-) {
+query GetProductionHistory($first: Int = 50, $after: String) {
   productionBatches(first: $first, after: $after) {
     edges {
       node {
@@ -483,36 +494,49 @@ query GetProductionHistory(
 
 Implement caching for optimal performance:
 
-
-1. **CDN Caching**
-   Static resources cached at edge locations for fast global access.
-
-2. **API Response Caching**
-   Frequently accessed data cached with configurable TTL.
-
-3. **Client-Side Caching**
-   Use our SDK's built-in caching for repeated queries.
-
-4. **Cache Invalidation**
-   Automatic cache invalidation on data updates.
-
-
+<CardGroup cols={2}>
+  <Card title="CDN Caching" icon="network-wired">
+    Static resources cached at edge locations for fast global access
+  </Card>
+  <Card title="API Response Caching" icon="server">
+    Frequently accessed data cached with configurable TTL
+  </Card>
+  <Card title="Client-Side Caching" icon="mobile">
+    Use our SDK's built-in caching for repeated queries
+  </Card>
+  <Card title="Cache Invalidation" icon="rotate">
+    Automatic cache invalidation on data updates
+  </Card>
+</CardGroup>
 
 ## Best Practices
-
-
-
 
 ## Need Help?
 
 Advanced features require advanced support:
 
-- 📚 **Enterprise Documentation**: Comprehensive guides for enterprise features
-- 👨‍💼 **Dedicated Account Manager**: Personal contact for enterprise customers
-- 🛠️ **Professional Services**: Custom development and integration services
-- 🎓 **Training Programs**: On-site and virtual training for your team
-- 📞 **24/7 Support**: Enterprise support available around the clock
+<CardGroup cols={2}>
+  <Card title="Enterprise Documentation" icon="book">
+    Comprehensive guides for enterprise features
+  </Card>
+  <Card title="Dedicated Account Manager" icon="user-tie">
+    Personal contact for enterprise customers
+  </Card>
+  <Card title="Professional Services" icon="briefcase">
+    Custom development and integration services
+  </Card>
+  <Card title="Training Programs" icon="graduation-cap">
+    On-site and virtual training for your team
+  </Card>
+  <Card title="24/7 Support" icon="headset">
+    Enterprise support available around the clock
+  </Card>
+  <Card title="Developer Community" icon="users">
+    Join our Discord for peer support and best practices
+  </Card>
+</CardGroup>
 
-> **Note:**
-**Enterprise Support**: All advanced features include priority support with 1-hour response SLA for critical issues.
-
+<Note>
+  **Enterprise Support**: All advanced features include priority support with
+  **1-hour response SLA** for critical issues.
+</Note>

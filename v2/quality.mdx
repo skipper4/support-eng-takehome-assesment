@@ -1,70 +1,79 @@
 ---
-title: "Quality Control - v2.0"
+title: "Quality Control"
 description: "AI-powered quality prediction with automated IoT testing systems"
 ---
 
-# Quality Control - v2.0
-
-Ensure consistent salsa quality with AI-powered prediction and automated IoT testing.
-
+<Card>
+  Ensure consistent salsa quality with AI-powered prediction and automated IoT
+  testing.
+</Card>
 ## Overview
 
 v2.0 introduces AI quality prediction, automated IoT testing equipment, and computer vision for visual inspection. Catch quality issues before they happen.
 
 ## AI Quality Prediction
 
-### Predictive Quality Scoring
+<CardGroup cols={2}>
+  <Card title="Predictive Quality Scoring" icon="chart-line">
+    AI predicts quality scores before batch completion:
 
-AI predicts quality scores before batch completion:
+    - Analyzes ingredient quality data
+    - Monitors production conditions in real-time
+    - Predicts final quality score with 95% accuracy
+    - Provides early warnings for potential issues
 
-- Analyzes ingredient quality data
-- Monitors production conditions in real-time
-- Predicts final quality score with 95% accuracy
-- Provides early warnings for potential issues
+  </Card>
 
-```javascript
+  <Card title="Anomaly Detection" icon="sensor-triangle-exclamation">
+    AI identifies quality issues in real-time:
+
+    - Unusual ingredient combinations
+    - Temperature deviations during production
+    - Inconsistent mixing times
+    - pH level variations
+
+  </Card>
+</CardGroup>
+
+```javascript Javascript
 // Example: Get AI quality prediction
 const prediction = await salsa.ai.quality.predict({
   batch_id: "BATCH-2024-001",
-  current_stage: "mixing"
+  current_stage: "mixing",
 });
 
 console.log(`Predicted quality: ${prediction.score}/10`);
 console.log(`Confidence: ${prediction.confidence}%`);
 ```
 
-### Anomaly Detection
-
-AI identifies quality issues in real-time:
-
-- Unusual ingredient combinations
-- Temperature deviations during production
-- Inconsistent mixing times
-- pH level variations
-
 ## IoT Automated Testing
 
-### Connected Testing Equipment
+<CardGroup cols={2}>
+  <Card title="Connected Testing Equipment" icon="rectangle-beta">
+    Automated quality tests with IoT devices:
 
-Automated quality tests with IoT devices:
+    - **pH meters**: Continuous pH monitoring
+    - **Viscosity sensors**: Consistency measurements
+    - **Color sensors**: Visual consistency checks
+    - **Temperature probes**: Production temperature tracking
 
-- **pH meters**: Continuous pH monitoring
-- **Viscosity sensors**: Consistency measurements
-- **Color sensors**: Visual consistency checks
-- **Temperature probes**: Production temperature tracking
+  </Card>
 
-### Computer Vision Inspection
+  <Card title="Computer Vision Inspection" icon="camera">
+    AI-powered visual quality control:
 
-AI-powered visual quality control:
+    - Automated visual inspection using cameras
+    - Defect detection (contamination, inconsistency)
+    - Portion control verification
+    - Packaging quality checks
 
-- Automated visual inspection using cameras
-- Defect detection (contamination, inconsistency)
-- Portion control verification
-- Packaging quality checks
+  </Card>
+</CardGroup>
 
-> **Note:**
-**New in v2.0**: Computer vision systems can inspect 100% of production, compared to manual sampling in v1.0.
-
+<Note>
+  **New in v2.0:** Computer vision systems can inspect 100% of production,
+  compared to manual sampling in v1.0.
+</Note>
 
 ## Quality Scoring
 
@@ -72,7 +81,7 @@ AI-powered visual quality control:
 
 Machine learning improves quality assessment:
 
-```javascript
+```javascript Javascript
 // Example: Record quality with AI assistance
 const qualityCheck = await salsa.ai.quality.recordScore({
   batch_id: "BATCH-2024-001",
@@ -80,12 +89,12 @@ const qualityCheck = await salsa.ai.quality.recordScore({
     visual_ai: 9.2,
     ph_sensor: 8.8,
     viscosity: 9.0,
-    temperature: 10.0
+    temperature: 10.0,
   },
   manual_scores: {
-    taste: 9.5
+    taste: 9.5,
   },
-  ai_analysis: true
+  ai_analysis: true,
 });
 ```
 
@@ -100,49 +109,53 @@ AI monitors equipment health:
 
 ## Quality Standards
 
-### Smart Standards
+<CardGroup cols={2}>
+  <Card title="Smart Standards" icon="shield-check">
+    AI-adjusted quality standards:
 
-AI-adjusted quality standards:
+    - Automatic threshold adjustments based on historical data
+    - Seasonal variation compensation
+    - Supplier quality correlation
+    - Customer feedback integration
 
-- Automatic threshold adjustments based on historical data
-- Seasonal variation compensation
-- Supplier quality correlation
-- Customer feedback integration
+  </Card>
 
-### Real-Time Compliance
+  <Card title="Real-Time Compliance" icon="file-check">
+    Automated compliance monitoring:
 
-Automated compliance monitoring:
+    - HACCP automated documentation
+    - FDA regulation tracking
+    - Real-time violation alerts
+    - Digital audit trails
 
-- HACCP automated documentation
-- FDA regulation tracking
-- Real-time violation alerts
-- Digital audit trails
+  </Card>
+</CardGroup>
 
 ## Quality Insights
 
-### AI-Powered Analytics
+<CardGroup cols={2}>
+  <Card title="AI-Powered Analytics" icon="chart-mixed">
+    Deep quality insights:
 
-Deep quality insights:
+    - Root cause analysis for quality issues
+    - Correlation between ingredients and scores
+    - Supplier quality impact analysis
+    - Production condition optimization
 
-- Root cause analysis for quality issues
-- Correlation between ingredients and scores
-- Supplier quality impact analysis
-- Production condition optimization
+  </Card>
 
-### Continuous Improvement
+  <Card title="Continuous Improvement" icon="sparkles">
+    AI suggests quality improvements:
 
-AI suggests quality improvements:
+    - Ingredient substitution recommendations
+    - Process optimization suggestions
+    - Equipment upgrade recommendations
+    - Training needs identification
 
-- Ingredient substitution recommendations
-- Process optimization suggestions
-- Equipment upgrade recommendations
-- Training needs identification
+  </Card>
+</CardGroup>
 
-> **Warning:**
-**Critical Quality Alerts**: AI-detected safety issues trigger immediate production halts and manager notifications.
-
-
-## Best Practices
-
-
-
+<Warning>
+  **Critical Quality Alerts:** AI-detected safety issues trigger immediate
+  production halts and manager notifications.
+</Warning>

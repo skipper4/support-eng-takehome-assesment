@@ -1,0 +1,106 @@
+This page explains my approach to designing the Salsa as a Service documentation structure, the component choices I made, and the reasoning behind the decisions.
+
+# Architecture & Navigation Decisions
+
+## 1. Version Strategy
+
+- I set version 2.0 as the default version to ensure new users land on the most up-to-date and fully supported documentation experience.
+
+- Version 1.0 remains accessible mainly for existing customers who still rely on older integrations, preserving backward compatibility while guiding new users toward the latest version.
+
+- The **impact on UX** is that users immediately discover the latest features without navigating through outdated documentation.
+  My idea was to balance progress with stability.
+
+## 2. Language Support (Internationalization)
+
+- I structured the documentation to support both **English (default) and French**, reflecting the needs of international users.
+
+- I also mirrored the same navigation structure across languages. This helpsto:
+  - Ensure predictable navigation
+  - Simplify long-term maintenance
+
+## 3. Tab-Based Navigation (UX First)
+
+- I went with tabs as top-level navigation to separate distinct user intents.
+  - **Documentation**
+  - **API Reference**
+  - **Changelog**
+
+- That's because different users have different goals (learning the product, building integrations, or tracking changes).
+- The advantage is that the different users such as developers can jump straight to API endpoints, while business users can focus on features and pricing without technical noise.
+
+## 4. Logical Content Grouping (User Journey Design)
+
+Within the Documentation tab, I grouped content to reflect a **natural user journey**:
+
+1. **Getting Started** - Onboarding and setup
+2. **Core Concepts** - Foundational understanding
+3. **Advanced** (v2 only) - Deeper configuration
+4. **Pricing** - Commercial clarity
+5. **Troubleshooting** - Problem resolution
+
+I structured it this way because users typically move from **learning >>> implementing >>> optimizing >>> evaluating**.
+
+## 5. Versioning Above Tabs (Hierarchy of Context)
+
+- I intentionally placed versioning at the top level above tabs rather than placing tabs above version selection.
+
+- I made this decision because version is the highest-order context in documentation.
+  - Before a user decides what they want to view (Documentation, API Reference, or Changelog), they first need to know which product version they are working with.
+- This helps ensure that all tabs operate within that selected version.
+
+# Components & reasoning
+
+## 1. CardGroup
+
+- I used CardGroups on landing pages and section overviews to create clear entry points into major documentation areas.
+- That's because they improve visual hierarchy and they also feel modern.
+
+## 2. Tabs
+
+- I used tabs in sections such as:
+  - POS integrations (Square vs Toast vs Clover)
+  - ERP systems (SAP vs Oracle vs Microsoft Dynamics)
+  - Communication platforms (Slack vs Teams vs SMS)
+- Tabs are useful for content where users need to choose between alternatives.
+- They also allow the same screen space to accommodate multiple detailed sections
+
+## 3. Accordions
+
+- I mostly used accordions for content such as:
+  - FAQ sections (expandable Q&A)
+  - Troubleshooting steps (expandable solutions)
+  - Detailed feature specifications
+- Instead of displaying every solution at once, accordions allow for progressive disclosure, which reduces cognitive load.
+
+## 4. Callouts
+
+- I used **Info, Warning, Note,** and **Tip callouts** to provide contextual guidance exactly where users need it.
+- They help ensure important info stands out and is easily digestible.
+
+## 5. CodeGroups
+
+- I implemented CodeGroups wherever I needed to show the same operation in different programming languages.
+- An advantage of codegroups is that users get copy-paste-ready code immediately without needing to search for language-specific examples.
+
+# Custom Styling Decisions
+
+- I introduced subtle custom styling to enhance the experience without distracting from the content.
+- Since my primary color is orange, I added a soft radial gradient to reinforce the brand's identity, and add a bit of warmth and depth.
+
+# Not yet Done!
+
+## French v2 files
+
+- I completed the structural updates for v2 English first to validate architecture decisions before replicating them across other languages.
+- The French version will mirror the same schema once validation is complete.
+
+## Migrating API Reference to OpenAPI
+
+- This is an area I'm still testing out the migration process for.
+
+# Conclusion
+
+- Throughout the documentation, my main focus was:
+  - Making it easier for the user to access and read content
+  - Design for the future. Make it easy to maintain and scale.

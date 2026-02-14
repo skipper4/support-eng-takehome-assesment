@@ -1,0 +1,27 @@
+/* Light theme */
+:root {
+  --background: #ffffff;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 138, 101, 0.1) 0%,
+      transparent 30%
+    ),
+    linear-gradient(180deg, rgba(255, 248, 240, 0.8) 0%, #ffffff 30%);
+  background-attachment: fixed;
+}
+
+/* Dark theme */
+html.dark body {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(216, 67, 21, 0.2) 0%,
+      transparent 35%
+    ),
+    linear-gradient(180deg, #1a1512 0%, #0e0e0e 40%);
+  background-attachment: fixed;
+}

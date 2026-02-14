@@ -1,26 +1,225 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "almond",
   "name": "Salsa as a Service",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FF8A65",
+    "light": "#FFE0B2",
+    "dark": "#D84315"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group":"V1",
-        "pages":[
-          "v1/index",
-          "v1/getting-started",
-          "v1/integrations",
-          "v1/pricing",
-          "v1/troubleshooting",
-          "v1/analytics",
-          "v1/quality",
-          "v1/inventory"
+        "language": "en",
+        "default": true,
+        "versions": [
+          {
+            "version": "Version 2.0",
+            "tabs": [
+              {
+                "tab": "Documentation",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": ["v2/index", "v2/getting-started"]
+                  },
+                  {
+                    "group": "Core Concepts",
+                    "pages": [
+                      "v2/analytics",
+                      "v2/inventory",
+                      "v2/integrations",
+                      "v2/quality"
+                    ]
+                  },
+                  {
+                    "group": "Advanced",
+                    "pages": ["v2/advanced-usage"]
+                  },
+                  {
+                    "group": "Pricing",
+                    "pages": ["v2/pricing"]
+                  },
+                  {
+                    "group": "Troubleshooting",
+                    "pages": ["v2/troubleshooting"]
+                  },
+                  {
+                    "group": "Thought Process",
+                    "pages": ["explanation"]
+                  }
+                ]
+              },
+              {
+                "tab": "API Reference",
+                "groups": [
+                  {
+                    "group": "Endpoints",
+                    "pages": ["v2/api-reference"]
+                  }
+                ]
+              },
+              {
+                "tab": "Changelog",
+                "groups": [
+                  {
+                    "group": "Releases",
+                    "pages": ["v2/changelog"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": "Version 1.0",
+            "tabs": [
+              {
+                "tab": "Documentation",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": ["v1/index", "v1/getting-started"]
+                  },
+                  {
+                    "group": "Core Concepts",
+                    "pages": [
+                      "v1/analytics",
+                      "v1/inventory",
+                      "v1/integrations",
+                      "v1/quality"
+                    ]
+                  },
+                  {
+                    "group": "Pricing",
+                    "pages": ["v1/pricing"]
+                  },
+                  {
+                    "group": "Troubleshooting",
+                    "pages": ["v1/troubleshooting"]
+                  }
+                ]
+              },
+              {
+                "tab": "API Reference",
+                "groups": [
+                  {
+                    "group": "Endpoints",
+                    "pages": ["v1/api-reference"]
+                  }
+                ]
+              },
+              {
+                "tab": "Changelog",
+                "groups": [
+                  {
+                    "group": "Releases",
+                    "pages": ["v1/changelog"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "default": false,
+        "versions": [
+          {
+            "version": "Version 2.0",
+            "tabs": [
+              {
+                "tab": "Documentation",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": ["fr/v2/index", "fr/v2/getting-started"]
+                  },
+                  {
+                    "group": "Core Concepts",
+                    "pages": [
+                      "fr/v2/analytics",
+                      "fr/v2/inventory",
+                      "fr/v2/integrations",
+                      "fr/v2/quality"
+                    ]
+                  },
+                  {
+                    "group": "Advanced",
+                    "pages": ["fr/v2/advanced-usage"]
+                  },
+                  {
+                    "group": "Pricing",
+                    "pages": ["fr/v2/pricing"]
+                  }
+                ]
+              },
+              {
+                "tab": "Référence API",
+                "groups": [
+                  {
+                    "group": "Endpoints",
+                    "pages": ["fr/v2/api-reference"]
+                  }
+                ]
+              },
+              {
+                "tab": "Journal des modifications",
+                "groups": [
+                  {
+                    "group": "Versions",
+                    "pages": ["fr/v2/changelog"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": "Version 1.0",
+            "tabs": [
+              {
+                "tab": "Documentation",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": ["fr/v1/index", "fr/v1/getting-started"]
+                  },
+                  {
+                    "group": "Core Concepts",
+                    "pages": [
+                      "fr/v1/analytics",
+                      "fr/v1/inventory",
+                      "fr/v1/integrations",
+                      "fr/v1/quality"
+                    ]
+                  },
+                  {
+                    "group": "Pricing",
+                    "pages": ["fr/v1/pricing"]
+                  }
+                ]
+              },
+              {
+                "tab": "Référence API",
+                "groups": [
+                  {
+                    "group": "Endpoints",
+                    "pages": ["fr/v1/api-reference"]
+                  }
+                ]
+              },
+              {
+                "tab": "Journal des modifications",
+                "groups": [
+                  {
+                    "group": "Versions",
+                    "pages": ["fr/v1/changelog"]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     ]
@@ -32,7 +231,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Talk to Us",
         "href": "mailto:support@salsaasaservice.com"
       }
     ],
@@ -44,15 +243,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
