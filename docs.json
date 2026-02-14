@@ -259,5 +259,8 @@
       "github": "https://github.com/salsaasaservice",
       "linkedin": "https://linkedin.com/company/salsaasaservice"
     }
+  },
+  "appearance": {
+    "default": "light"
   }
 }
