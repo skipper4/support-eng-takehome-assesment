@@ -25,3 +25,16 @@ html.dark body {
     linear-gradient(180deg, #1a1512 0%, #0e0e0e 40%);
   background-attachment: fixed;
 }
+/* Enhance card hover glow */
+.card:hover {
+  box-shadow:
+    0 4px 12px rgba(255, 138, 101, 0.15),
+    0 0 20px rgba(255, 138, 101, 0.08);
+  transition: all 0.3s ease;
+}
+
+html.dark .card:hover {
+  box-shadow:
+    0 4px 12px rgba(216, 67, 21, 0.25),
+    0 0 20px rgba(216, 67, 21, 0.12);
+}
