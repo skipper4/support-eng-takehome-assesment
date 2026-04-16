@@ -241,6 +241,11 @@
       "href": "https://dashboard.salsaasaservice.com"
     }
   },
+   "integrations": {
+    "plausible": {
+      "domain": "skippyfy.mintlify.app"
+    }
+  },
   "contextual": {
     "options": [
       "copy",
