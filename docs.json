@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#FF8A65",
     "light": "#FFE0B2",
-    "dark": "#D84315"
+    "dark": "#D84315" 
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -36,6 +36,10 @@
                   {
                     "group": "Advanced",
                     "pages": ["v2/advanced-usage"]
+                  },
+                  {
+                    "group": "Advanced11",
+                    "pages": ["v1/ntegrations"]
                   },
                   {
                     "group": "Pricing",
