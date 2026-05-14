@@ -52,6 +52,10 @@
                   {
                     "group": "Thought Process",
                     "pages": ["explanation"]
+                  },
+                  {
+                    "group": "CSS Tests",
+                    "pages": ["v2/image-in-list-test"]
                   }
                 ]
               },
@@ -271,5 +275,6 @@
   },
   "appearance": {
     "default": "light"
-  }
+  },
+  "css": "/style.css"
 }

@@ -38,3 +38,12 @@ html.dark .card:hover {
     0 4px 12px rgba(216, 67, 21, 0.25),
     0 0 20px rgba(216, 67, 21, 0.12);
 }
+
+/* Workaround: images in list items lose spacing because [data-rmiz] (react-medium-image-zoom wrapper)
+   defaults to display:contents, collapsing its box and preventing block margins from applying. */
+.prose :is(ul, ol) > li [data-rmiz],
+.prose-sm :is(ul, ol) > li [data-rmiz] {
+  display: block;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
